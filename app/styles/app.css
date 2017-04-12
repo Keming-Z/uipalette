@@ -1,0 +1,165 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  height: 100%;
+  margin: auto; }
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 112px;
+  background-color: #fafafa;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.24), 0 0 3px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1; }
+
+#uipalette-logo, #uipalette-description {
+  position: absolute;
+  left: 32px;
+  height: 24px; }
+
+#uipalette-logo {
+  top: 32px;
+  width: 97px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal; }
+  #uipalette-logo #uipalette-logo-style1 {
+    color: #fc2b79; }
+  #uipalette-logo #uipalette-logo-style2 {
+    color: #3843b0; }
+
+#uipalette-description {
+  top: 56px;
+  width: auto;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.38);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+
+.input-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 32.5px;
+  width: 208px; }
+  .input-wrap i {
+    position: absolute;
+    bottom: 6px;
+    right: 3px;
+    color: #8d8d8d;
+    cursor: pointer; }
+    .input-wrap i:hover {
+      transform: translateY(-1px); }
+    .input-wrap i:active {
+      transform: translateY(1px); }
+
+.input-hex {
+  font-size: 32px;
+  border-bottom: solid rgba(0, 0, 0, 0.12) 1px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background: transparent;
+  color: #ff498c;
+  text-shadow: 0px 0px 0px #777;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  width: 208px; }
+  .input-hex:focus {
+    outline-width: 0; }
+  .input-hex::-webkit-input-placeholder {
+    width: 61px;
+    height: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 32px;
+    line-height: 1.0; }
+  .input-hex:-moz-placeholder {
+    width: 61px;
+    height: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 32px;
+    line-height: 1.0; }
+  .input-hex::-moz-placeholder {
+    width: 61px;
+    height: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 32px;
+    line-height: 1.0; }
+  .input-hex:-ms-input-placeholder {
+    width: 61px;
+    height: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 32px;
+    line-height: 1.0; }
+
+.color-body .color-row1, .color-body .color-row2, .color-body .color-row3 {
+  flex-basis: 33.33%;
+  display: flex; }
+  .color-body .color-row1 div, .color-body .color-row2 div, .color-body .color-row3 div {
+    height: 100%;
+    flex-basis: 11.11%;
+    border: 1px solid rgba(0, 0, 0, 0.05); }
+
+.color-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  padding-top: 112px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.24), 0 0 3px 0 rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column; }
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0; }
+  .footer .github-logo {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    width: 73px;
+    height: 32px;
+    border-radius: 3px;
+    border: solid 1px rgba(0, 0, 0, 0.87); }
+    .footer .github-logo img {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 17px;
+      height: 17px;
+      object-fit: contain; }
+    .footer .github-logo .github-text {
+      position: absolute;
+      top: 8px;
+      left: 27px;
+      width: 40px;
+      height: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 12px; }
+  .footer .copyright {
+    position: absolute;
+    right: 32px;
+    bottom: 16px;
+    width: auto;
+    height: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    line-height: 2.0; }
+
+/*# sourceMappingURL=app.css.map */

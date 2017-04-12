@@ -1,0 +1,206 @@
+$AppleSystemUIFont: -apple-system, BlinkMacSystemFont,sans-serif;
+$header-height: 112px;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    height: 100%;
+    margin: auto;
+    // background-color: aqua;
+}
+
+.header {
+    position: absolute;
+    // display: flex;
+    // justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height;
+    background-color: #fafafa;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.24), 0 0 3px 0 rgba(0, 0, 0, 0.12);
+    z-index: 1;
+}
+
+%uipalette-all {
+    position: absolute;
+    left: 32px;
+    height: 24px;
+}
+
+#uipalette-logo {
+    @extend %uipalette-all;
+    top: 32px;
+    width:97px;
+    font-family: $AppleSystemUIFont;
+    font-size: 20px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+    #uipalette-logo-style1 {
+        color: #fc2b79;
+    }
+    #uipalette-logo-style2 {
+        color: #3843b0;
+    }
+}
+
+#uipalette-description {
+    @extend %uipalette-all;
+    top: 56px;
+    width: auto;
+    font-size: 16px;
+	line-height: 1.5;
+    color: rgba(0, 0, 0, 0.38);
+    font-family: $AppleSystemUIFont;
+}
+
+.input-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 32.5px;
+    width: 208px;
+    i {
+        position: absolute;
+        bottom: 6px;
+        right: 3px;
+        color: #8d8d8d;
+        cursor: pointer;
+        &:hover {
+            transform: translateY(-1px);
+        }
+        &:active {
+            transform: translateY(1px);
+        }
+    }
+}
+
+@mixin optional-at-root ($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+
+.input-hex {
+    font-size: 32px;
+    border-bottom: solid rgba(0,0,0,0.12) 1px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: transparent;
+    color: #ff498c;
+    text-shadow: 0px 0px 0px #777;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    width: 208px;
+    &:focus {
+        outline-width: 0;
+    }
+    @include placeholder {
+        width: 61px;
+	    height: 32px;
+	    font-family: $AppleSystemUIFont;
+	    font-size: 32px;
+	    line-height: 1.0;
+    }
+}
+
+%color-row {
+    flex-basis: 33.33%;
+    display: flex;
+    div {
+        height: 100%;
+        flex-basis: 11.11%;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
+
+.color-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    padding-top: $header-height;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.24), 0 0 3px 0 rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    .color-row1, .color-row2 {
+        @extend %color-row;
+    }
+    .color-row3 {
+        @extend %color-row;
+    }
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    .github-logo {
+        position: absolute;
+        left:16px;
+        bottom: 16px;
+        width: 73px;
+	    height: 32px;
+    	border-radius: 3px;
+    	border: solid 1px rgba(0, 0, 0, 0.87);
+        img {
+            position: absolute;
+            top:8px;
+            left:8px;
+            width: 17px;
+        	height: 17px;
+        	object-fit: contain;
+        }
+        .github-text {
+            position: absolute;
+            top: 8px;
+            left: 27px;
+            width: 40px;
+        	height: 16px;
+        	font-family: $AppleSystemUIFont;
+        	font-size: 12px;
+        }
+    }
+    .copyright {
+        position: absolute;
+        right: 32px;
+        bottom: 16px;
+        width: auto;
+    	height: 24px;
+    	font-family: $AppleSystemUIFont;
+    	font-size: 12px;
+    	line-height: 2.0;
+    }
+}
