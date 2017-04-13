@@ -1,0 +1,18 @@
+@import "../modules/base";
+
+.color-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    padding-top: $header-height;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.24), 0 0 3px 0 rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    .color-row1, .color-row2 {
+        @extend %color-row;
+    }
+    .color-row3 {
+        @extend %color-row;
+    }
+}

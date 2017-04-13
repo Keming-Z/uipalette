@@ -1,0 +1,30 @@
+@import "../modules/base";
+
+#uipalette-logo {
+    @extend %uipalette-all;
+    top: 32px;
+    width:97px;
+    font-family: $AppleSystemUIFont;
+    font-size: 20px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+    #uipalette-logo-style1 {
+        color: #fc2b79;
+    }
+    #uipalette-logo-style2 {
+        color: #3843b0;
+    }
+}
+
+#uipalette-description {
+    @extend %uipalette-all;
+    top: 56px;
+    width: auto;
+    font-size: 16px;
+	line-height: 1.5;
+    color: rgba(0, 0, 0, 0.38);
+    font-family: $AppleSystemUIFont;
+}

@@ -1,0 +1,43 @@
+$AppleSystemUIFont: -apple-system, BlinkMacSystemFont,sans-serif;
+$header-height: 112px;
+
+%uipalette-all {
+    position: absolute;
+    left: 32px;
+    height: 24px;
+}
+
+
+%color-row {
+    flex-basis: 33.33%;
+    display: flex;
+    div {
+        height: 100%;
+        flex-basis: 11.11%;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
+
+@mixin optional-at-root ($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
