@@ -1,4 +1,4 @@
 # uipalette
 One click palette, easy and simple.
 
-Type "gulp start" in command line to run the project.
+Type "npm install" in command line to build, and "gulp start" to run the project.
