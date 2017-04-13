@@ -9,4 +9,12 @@ In the future: customized color difference range.
                
                
 ### run it
-Type "npm install" in command line to build, then "npm start" to run the project.
+In command line type 
+```
+npm install
+```
+to build the project then
+```
+npm start
+```
+to run, it should be on port 3000.
