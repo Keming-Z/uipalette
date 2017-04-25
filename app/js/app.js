@@ -1,4 +1,4 @@
-angular.module('uipalette', [
+var app = angular.module('uipalette', [
     'ngRoute'
 ])
 .config([
