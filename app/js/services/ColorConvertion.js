@@ -8,6 +8,7 @@ function ConverColor() {
     return service;
 
     function rbgToHsl(r, b, g) {
+        console.log("hello")
         var d, h, l, max, min, s;
         r /= 255;
         g /= 255;

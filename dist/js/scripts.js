@@ -47007,6 +47007,7 @@ function ConverColor() {
     return service;
 
     function rbgToHsl(r, b, g) {
+        console.log("hello")
         var d, h, l, max, min, s;
         r /= 255;
         g /= 255;
@@ -47069,9 +47070,7 @@ function ConverColor() {
     }
 }
 
-app.service('GenerateColor', GenerateColor);
-
-function GenerateColor() {
+app.service('GenerateColor', ['ConverColor',function(ConverColor) {
     var service = {
         initColor: initColor
     }
@@ -47079,7 +47078,6 @@ function GenerateColor() {
 
     function initColor(hslArr, rows) {
         initHslArr(hslArr);
-
         for(let i = 0; i < 9; i++) {
             setHsl(rows[0][i], hslArr[0], i);
             setHsl(rows[1][i], hslArr[1], i);
@@ -47098,4 +47096,4 @@ function GenerateColor() {
     function setHsl(elem, arr, i) {
         elem.style.backgroundColor = arr[i];
     }
-}
+}]);

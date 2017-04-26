@@ -1,6 +1,4 @@
-app.service('GenerateColor', GenerateColor);
-
-function GenerateColor() {
+app.service('GenerateColor', ['ConverColor',function(ConverColor) {
     var service = {
         initColor: initColor
     }
@@ -8,7 +6,6 @@ function GenerateColor() {
 
     function initColor(hslArr, rows) {
         initHslArr(hslArr);
-
         for(let i = 0; i < 9; i++) {
             setHsl(rows[0][i], hslArr[0], i);
             setHsl(rows[1][i], hslArr[1], i);
@@ -27,4 +24,4 @@ function GenerateColor() {
     function setHsl(elem, arr, i) {
         elem.style.backgroundColor = arr[i];
     }
-}
+}]);
